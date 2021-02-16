@@ -1,4 +1,4 @@
-# Estudo com AVPlayer
+# Estudo com AVKit
 
 Etapas de estudo
 
