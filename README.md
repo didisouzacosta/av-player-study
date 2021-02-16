@@ -2,8 +2,8 @@
 
 Etapas de estudo
 
-[x] - Reprodução de vídeo
-[ ] - Conhecimento dos delegates
-[ ] - Criando controladores customizados
-[ ] - Reprodução do vídeo com o app em segundo plano
-[ ] - Integrar com Vimeo e Youtube
+1. [x] - Reprodução de vídeo
+2. [ ] - Conhecimento dos delegates
+3. [ ] - Criando controladores customizados
+4. [ ] - Reprodução do vídeo com o app em segundo plano
+5. [ ] - Integrar com Vimeo e Youtube
