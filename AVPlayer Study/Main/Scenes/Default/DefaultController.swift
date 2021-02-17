@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DefaultController.swift
 //  AVPlayer Study
 //
 //  Created by Adriano Souza Costa on 16/02/21.
@@ -8,14 +8,16 @@
 import UIKit
 import AVKit
 
-class ViewController: UIViewController {
+class DefaultController: UIViewController {
 
     // MARK: - Private Properties
     
     private lazy var playerController: AVPlayerViewController = {
-        let videoURL = URL(string: "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4")
+        let url = Constants.videoURL
         let controller = AVPlayerViewController()
-        controller.player = AVPlayer(url: videoURL!)
+        controller.player = AVPlayer(url: url)
+        controller.showsTimecodes = true
+        controller.player?.play()
         return controller
     }()
     
@@ -24,7 +26,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPlayer()
-        play()
     }
     
     // MARK: - Private Methods
@@ -34,10 +35,6 @@ class ViewController: UIViewController {
         view.addSubview(playerController.view)
         addChild(playerController)
         playerController.view.frame = view.frame
-    }
-    
-    private func play() {
-        playerController.player?.play()
     }
 
 }
