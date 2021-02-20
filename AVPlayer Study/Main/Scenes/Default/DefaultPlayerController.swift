@@ -1,5 +1,5 @@
 //
-//  DefaultController.swift
+//  DefaultPlayerController.swift
 //  AVPlayer Study
 //
 //  Created by Adriano Souza Costa on 16/02/21.
@@ -8,16 +8,17 @@
 import UIKit
 import AVKit
 
-class DefaultController: UIViewController {
+final class DefaultPlayerController: UIViewController {
 
     // MARK: - Private Properties
     
     private lazy var playerController: AVPlayerViewController = {
-        let url = Constants.videoURL
+        let player = AVPlayer(url: Constants.videoURL)
+        
         let controller = AVPlayerViewController()
-        controller.player = AVPlayer(url: url)
+        controller.player = player
         controller.showsTimecodes = true
-        controller.player?.play()
+        
         return controller
     }()
     
@@ -35,6 +36,8 @@ class DefaultController: UIViewController {
         view.addSubview(playerController.view)
         addChild(playerController)
         playerController.view.frame = view.frame
+        
+        playerController.player?.play()
     }
 
 }

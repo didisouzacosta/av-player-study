@@ -9,6 +9,6 @@ import Foundation
 
 struct Constants {
     
-    static let videoURL = URL(string: "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4")!
+    static let videoURL = URL(string: "https://samplelib.com/lib/preview/mp4/sample-30s.mp4")!
     
 }

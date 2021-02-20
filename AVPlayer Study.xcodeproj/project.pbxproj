@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		B32EF05D25DC9A560018D4F4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32EF05C25DC9A560018D4F4 /* Constants.swift */; };
+		B32EF06525DC9DB40018D4F4 /* LayerOnlyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32EF06425DC9DB40018D4F4 /* LayerOnlyController.swift */; };
 		B3A4B9D425DBDA3A00D6C878 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A4B9D325DBDA3A00D6C878 /* AppDelegate.swift */; };
 		B3A4B9D625DBDA3A00D6C878 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A4B9D525DBDA3A00D6C878 /* SceneDelegate.swift */; };
-		B3A4B9D825DBDA3A00D6C878 /* DefaultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A4B9D725DBDA3A00D6C878 /* DefaultController.swift */; };
+		B3A4B9D825DBDA3A00D6C878 /* DefaultPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A4B9D725DBDA3A00D6C878 /* DefaultPlayerController.swift */; };
 		B3A4B9DD25DBDA3B00D6C878 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3A4B9DC25DBDA3B00D6C878 /* Assets.xcassets */; };
 		B3A4B9E025DBDA3B00D6C878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A4B9DE25DBDA3B00D6C878 /* LaunchScreen.storyboard */; };
+		B3E17C3B25E04733004D756D /* CustomPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E17C3A25E04733004D756D /* CustomPlayerController.swift */; };
+		B3E17C3E25E054F0004D756D /* CustomPlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E17C3D25E054F0004D756D /* CustomPlayerController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B32EF05C25DC9A560018D4F4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B32EF06425DC9DB40018D4F4 /* LayerOnlyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerOnlyController.swift; sourceTree = "<group>"; };
 		B3A4B9D025DBDA3A00D6C878 /* AVPlayer Study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AVPlayer Study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A4B9D325DBDA3A00D6C878 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3A4B9D525DBDA3A00D6C878 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B3A4B9D725DBDA3A00D6C878 /* DefaultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultController.swift; sourceTree = "<group>"; };
+		B3A4B9D725DBDA3A00D6C878 /* DefaultPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPlayerController.swift; sourceTree = "<group>"; };
 		B3A4B9DC25DBDA3B00D6C878 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3A4B9DF25DBDA3B00D6C878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3A4B9E125DBDA3B00D6C878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3E17C3A25E04733004D756D /* CustomPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlayerController.swift; sourceTree = "<group>"; };
+		B3E17C3D25E054F0004D756D /* CustomPlayerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPlayerController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +46,7 @@
 		B32EF05925DC9A2A0018D4F4 /* Default */ = {
 			isa = PBXGroup;
 			children = (
-				B3A4B9D725DBDA3A00D6C878 /* DefaultController.swift */,
+				B3A4B9D725DBDA3A00D6C878 /* DefaultPlayerController.swift */,
 			);
 			path = Default;
 			sourceTree = "<group>";
@@ -51,6 +57,14 @@
 				B32EF05C25DC9A560018D4F4 /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		B32EF06325DC9DAA0018D4F4 /* LayerOnly */ = {
+			isa = PBXGroup;
+			children = (
+				B32EF06425DC9DB40018D4F4 /* LayerOnlyController.swift */,
+			);
+			path = LayerOnly;
 			sourceTree = "<group>";
 		};
 		B378D49425DC99C5006A56C1 /* Main */ = {
@@ -68,6 +82,8 @@
 		B378D49525DC99D6006A56C1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				B3E17C3925E04726004D756D /* Custom */,
+				B32EF06325DC9DAA0018D4F4 /* LayerOnly */,
 				B32EF05925DC9A2A0018D4F4 /* Default */,
 			);
 			path = Scenes;
@@ -105,6 +121,15 @@
 				B378D49425DC99C5006A56C1 /* Main */,
 			);
 			path = "AVPlayer Study";
+			sourceTree = "<group>";
+		};
+		B3E17C3925E04726004D756D /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				B3E17C3A25E04733004D756D /* CustomPlayerController.swift */,
+				B3E17C3D25E054F0004D756D /* CustomPlayerController.xib */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +191,7 @@
 			files = (
 				B3A4B9E025DBDA3B00D6C878 /* LaunchScreen.storyboard in Resources */,
 				B3A4B9DD25DBDA3B00D6C878 /* Assets.xcassets in Resources */,
+				B3E17C3E25E054F0004D756D /* CustomPlayerController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,10 +202,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3A4B9D825DBDA3A00D6C878 /* DefaultController.swift in Sources */,
+				B3A4B9D825DBDA3A00D6C878 /* DefaultPlayerController.swift in Sources */,
 				B3A4B9D425DBDA3A00D6C878 /* AppDelegate.swift in Sources */,
 				B3A4B9D625DBDA3A00D6C878 /* SceneDelegate.swift in Sources */,
 				B32EF05D25DC9A560018D4F4 /* Constants.swift in Sources */,
+				B32EF06525DC9DB40018D4F4 /* LayerOnlyController.swift in Sources */,
+				B3E17C3B25E04733004D756D /* CustomPlayerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Y3T2VA3Q3;
 				INFOPLIST_FILE = "$(SRCROOT)/AVPlayer Study/Main/Assets/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -340,6 +369,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Y3T2VA3Q3;
 				INFOPLIST_FILE = "$(SRCROOT)/AVPlayer Study/Main/Assets/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
