@@ -63,14 +63,13 @@ final class CustomPlayerController: UIViewController {
         super.viewDidLoad()
         
         setupPlayer()
+        setupAirPlayButton()
         setupActionLayers()
         
         registerEvents()
         
         updateHUD()
         updateVideoReproductionState()
-        
-        setupAirPlayButton()
     }
     
     // MARK: - Private Methods
@@ -157,13 +156,6 @@ final class CustomPlayerController: UIViewController {
         case .resizeAspect: playerController.videoGravity = .resizeAspectFill
         default: playerController.videoGravity = .resizeAspect
         }
-    }
-    
-    @IBAction private func pictureToPicture() {
-        
-//        playerController.player?.allowsExternalPlayback = false
-//        playerController.player?.usesExternalPlaybackWhileExternalScreenIsActive = true
-        print("aeee")
     }
     
     @IBAction private func willEnterForeground() {
