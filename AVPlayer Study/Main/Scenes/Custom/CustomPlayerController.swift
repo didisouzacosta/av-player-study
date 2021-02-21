@@ -35,10 +35,17 @@ final class CustomPlayerController: UIViewController {
         didSet { playerController.player = player }
     }
     
+    private lazy var airplayButton: AVRoutePickerView = {
+        let routePicker = AVRoutePickerView()
+        routePicker.prioritizesVideoDevices = true
+        routePicker.delegate = self
+        return routePicker
+    }()
+    
     private lazy var playerController: AVPlayerViewController = {
         let controller = AVPlayerViewController()
         controller.player = player
-        controller.showsTimecodes = true
+        controller.player?.allowsExternalPlayback = true
         return controller
     }()
     
@@ -47,6 +54,7 @@ final class CustomPlayerController: UIViewController {
     @IBOutlet private var playerContainerView: UIView!
     @IBOutlet private var hudContainerView: UIView!
     @IBOutlet private var overlayView: UIView!
+    @IBOutlet private var airPlayContainerView: UIView!
     @IBOutlet private var actionLayers: [UIView] = []
     
     // MARK: - Public Methods
@@ -61,9 +69,17 @@ final class CustomPlayerController: UIViewController {
         
         updateHUD()
         updateVideoReproductionState()
+        
+        setupAirPlayButton()
     }
     
     // MARK: - Private Methods
+    
+    private func setupAirPlayButton() {
+        airplayButton.frame = airPlayContainerView.bounds
+        airplayButton.tintColor = .white
+        airPlayContainerView.addSubview(airplayButton)
+    }
     
     private func setupPlayer() {
         playerController.view.frame = playerContainerView.bounds
@@ -143,6 +159,13 @@ final class CustomPlayerController: UIViewController {
         }
     }
     
+    @IBAction private func pictureToPicture() {
+        
+//        playerController.player?.allowsExternalPlayback = false
+//        playerController.player?.usesExternalPlaybackWhileExternalScreenIsActive = true
+        print("aeee")
+    }
+    
     @IBAction private func willEnterForeground() {
         playerController.showsPlaybackControls = false
     }
@@ -150,5 +173,11 @@ final class CustomPlayerController: UIViewController {
     @IBAction private func didEnterBackground() {
         playerController.showsPlaybackControls = true
     }
+    
+}
+
+extension CustomPlayerController: AVRoutePickerViewDelegate {
+    
+    
     
 }

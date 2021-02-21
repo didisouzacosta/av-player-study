@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomPlayerController" customModule="AVPlayer_Study" customModuleProvider="target">
             <connections>
+                <outlet property="airPlayContainerView" destination="2iU-tM-rv5" id="k9O-iV-6qJ"/>
                 <outlet property="hudContainerView" destination="M3U-1P-705" id="DDK-Xd-PWY"/>
                 <outlet property="overlayView" destination="J2Y-hS-i2N" id="hG5-az-snz"/>
                 <outlet property="playerContainerView" destination="PWl-96-dbG" id="M8g-B8-rXQ"/>
@@ -118,21 +119,34 @@
                             </variation>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="r6F-rz-YJa">
-                            <rect key="frame" x="0.0" y="0.0" width="382" height="63"/>
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="76"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXx-DP-Qfq">
-                                    <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
-                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mIX-tg-EnE">
+                                    <rect key="frame" x="0.0" y="0.0" width="34" height="76"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9h-gk-z2M">
+                                            <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="34" id="DLW-G8-Ft1"/>
+                                                <constraint firstAttribute="width" secondItem="f9h-gk-z2M" secondAttribute="height" multiplier="1:1" id="slI-Ts-Cqx"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="togglePlayerGravity" destination="-1" eventType="touchUpInside" id="A3m-L7-dpX"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2iU-tM-rv5">
+                                            <rect key="frame" x="0.0" y="42" width="34" height="34"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="width" secondItem="gXx-DP-Qfq" secondAttribute="height" multiplier="1:1" id="2Wc-PL-rEA"/>
-                                        <constraint firstAttribute="height" constant="34" id="mFX-a1-SQa"/>
+                                        <constraint firstItem="2iU-tM-rv5" firstAttribute="width" secondItem="f9h-gk-z2M" secondAttribute="width" id="Z7p-aL-8sw"/>
+                                        <constraint firstItem="2iU-tM-rv5" firstAttribute="height" secondItem="f9h-gk-z2M" secondAttribute="height" id="oh3-YI-7jZ"/>
                                     </constraints>
-                                    <connections>
-                                        <action selector="togglePlayerGravity" destination="-1" eventType="touchUpInside" id="OR5-vR-tDh"/>
-                                    </connections>
-                                </button>
+                                </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Tz3-Q6-OVa">
-                                    <rect key="frame" x="53.5" y="0.0" width="275" height="63"/>
+                                    <rect key="frame" x="54.5" y="0.0" width="275" height="63"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video promocional" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymF-4w-3AQ">
                                             <rect key="frame" x="0.0" y="0.0" width="275" height="21.5"/>
@@ -149,16 +163,13 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6x-gH-Iv7">
-                                    <rect key="frame" x="348" y="0.0" width="34" height="34"/>
+                                    <rect key="frame" x="352" y="0.0" width="30" height="30"/>
                                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="h6x-gH-Iv7" secondAttribute="height" multiplier="1:1" id="pRL-Do-w1r"/>
                                     </constraints>
                                 </button>
                             </subviews>
-                            <constraints>
-                                <constraint firstItem="h6x-gH-Iv7" firstAttribute="width" secondItem="gXx-DP-Qfq" secondAttribute="width" id="MRz-nk-VA0"/>
-                            </constraints>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7e6-Fo-KJr">
                             <rect key="frame" x="133.5" y="335.5" width="115" height="115"/>
